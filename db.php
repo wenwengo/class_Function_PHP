@@ -124,15 +124,15 @@ function save($table, $array)
 
 
 //單寫foreach 將陣列轉存為sql暫存的陣列
-array2sql($arg){
-    function array2sql($array)
-    {
-        foreach ($array as $key => $value) {
-            $tmp[] = "`$key`='$value'";
-         }
-        return $tmp;
+function array2sql($array)
+{
+    foreach ($array as $key => $value) {
+        $tmp[] = "`$key`='$value'";
     }
-};
+
+    return $tmp;
+}
+
 
 //寫一個萬用的sql (即可手動打sql的)
 function q($sql)
